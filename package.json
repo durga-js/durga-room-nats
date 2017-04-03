@@ -1,5 +1,5 @@
 {
-  "name": "durga-room-nats",
+  "name": "durga-rooms-nats",
   "description": "Room proxy using nats",
   "author": [
     {
