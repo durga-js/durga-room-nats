@@ -8,14 +8,14 @@
       "url": "https://github.com/platdesign"
     }
   ],
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "joi": "^10.4.1",
     "nats": "^0.7.16"
   },
-  "scripts":{
-    "test":"NODE_ENV=test mocha",
-    "test:watch":"NODE_ENV=test mocha -w"
+  "scripts": {
+    "test": "NODE_ENV=test mocha",
+    "test:watch": "NODE_ENV=test mocha -w"
   },
   "repository": "git@github.com:durga-js/durga-room-nats.git",
   "devDependencies": {
