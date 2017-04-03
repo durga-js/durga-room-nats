@@ -11,6 +11,7 @@ describe('Durga room proxy nats', () => {
   beforeEach(() => {
     server = new Durga.Server({});
     server.roomProxy('nats', new NatsRoomProxy());
+    return server.start();
   });
 
   afterEach(() => server.stop());
