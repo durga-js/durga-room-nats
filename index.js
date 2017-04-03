@@ -39,23 +39,9 @@ module.exports = class NatsRoomProxy {
       this.options = value;
     });
 
+    this.nats = Nats.connect(this.options.nats);
+
   }
-
-
-
-
-  /**
-   * Will be executed during server.start()-hook
-   * @return void
-   */
-  start() {
-    if(!this.nats) {
-      this.nats = Nats.connect(this.options.nats);
-    } else {
-      this.nats.reconnect();
-    }
-  }
-
 
 
 
