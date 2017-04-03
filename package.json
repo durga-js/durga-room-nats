@@ -9,6 +9,13 @@
     }
   ],
   "version": "0.0.0",
-  "dependencies": {},
-  "repository":""
+  "dependencies": {
+    "nats": "^0.7.16"
+  },
+  "repository": "git@github.com:durga-js/durga-room-nats.git",
+  "devDependencies": {
+    "code": "^4.0.0",
+    "durga": "^0.0.2",
+    "mocha": "^3.2.0"
+  }
 }
