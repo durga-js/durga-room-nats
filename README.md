@@ -1,17 +1,34 @@
-# durga-room-nats
+# durga-rooms-nats
 
-Room proxy using nats
+[RoomProxy](https://platdesign.gitbooks.io/durga/content/concepts/proxies.html) for [Durga](https://github.com/durga-js/durga) using [nats.io](https://nats.io/) as transport and distribution layer.
 
 
 # Install
 
-`npm install --save durga-room-nats`
+`npm install --save durga-rooms-nats`
+
 
 # Usage
 
+```js
+const Durga = require('durga');
+const NatsRooms = require('durga-rooms-nats');
 
-# Author
+const server = new Durga.Server({ ... });
 
-[@platdesign](https://twitter.com/platdesign)
+server.roomProxy('nats', new NatsRooms({
+	
+	// will be passed through to nats.connect(options)
+	nats: { ... },
+	
+	// proxy will publish to durga.rooms.[roomName]
+	topicPrefix: 'durga.rooms' // -> default
 
-# License
+}));
+
+// define room
+server.room('foo', 'nats');
+
+// use room
+server.room('foo').emit('my-event', { my: 'payload' });
+```
