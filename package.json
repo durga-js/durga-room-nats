@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=test mocha",
-    "test:watch": "NODE_ENV=test mocha -w"
+    "test:watch": "NODE_ENV=test mocha -w",
+    "release:patch": "npm run test && npm-release patch"
   },
   "repository": "git@github.com:durga-js/durga-room-nats.git",
   "devDependencies": {
